@@ -1,0 +1,48 @@
+{
+  "project_name": "Student Performance Prediction",
+  "course": "CS4661 – Introduction to Data Science",
+  "status": "Proposed — pending group approval",
+  "objective": "Predict a student's GPA using selected study, attendance,\nfamily-support, extracurricular, and other chosen variables.\n\nCompare Linear Regression, Decision Tree Regression, and\nRandom Forest Regression, along with a simple mean baseline.\n\nEvaluate predictive relationships within the project dataset.\nDo not interpret associations as evidence of causation or use\nthese classroom predictions to make decisions about real students.",
+  "task_type": "Regression",
+  "target": "GPA",
+  "expected_target_range": [
+    0,
+    4
+  ],
+  "features": [
+    "Age",
+    "ParentalEducation",
+    "StudyTimeWeekly",
+    "Absences",
+    "Tutoring",
+    "ParentalSupport",
+    "Extracurricular",
+    "Sports",
+    "Music",
+    "Volunteering"
+  ],
+  "excluded_columns": {
+    "StudentID": "Identifier; not used as a predictor.",
+    "GradeClass": "Another grade-outcome field; excluded from inputs.",
+    "Gender": "Reserved for a possible exploratory subgroup review.",
+    "Ethnicity": "Reserved for a possible exploratory subgroup review."
+  },
+  "models_to_compare": [
+    "Mean-prediction baseline",
+    "Linear Regression",
+    "Decision Tree Regressor",
+    "Random Forest Regressor"
+  ],
+  "evaluation_metrics": [
+    "Mean Absolute Error",
+    "Root Mean Squared Error",
+    "R-squared"
+  ],
+  "scope_limits": [
+    "Predict GPA only in the initial experiment.",
+    "Do not use GPA or GradeClass as input features.",
+    "Do not interpret predictive relationships as causal effects.",
+    "Confirm input availability before making early-warning claims.",
+    "Do not use classroom predictions for real-student decisions."
+  ]
+}

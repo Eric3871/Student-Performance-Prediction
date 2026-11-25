@@ -1,0 +1,16 @@
+Variable,DataType,MissingValues,UniqueValues,ExampleValues,MeaningAndCoding_ManualReview
+StudentID,int64,0,2392,"[1001, 1002, 1003, 1004, 1005]",To be reviewed
+Age,int64,0,4,"[17, 18, 15, 16]",To be reviewed
+Gender,int64,0,2,"[1, 0]",To be reviewed
+Ethnicity,int64,0,4,"[0, 2, 1, 3]",To be reviewed
+ParentalEducation,int64,0,5,"[2, 1, 3, 4, 0]",To be reviewed
+StudyTimeWeekly,float64,0,2392,"[19.833722807854713, 15.40875605584674, 4.21056976881226, 10.028829473958217, 4.6724952729713305]",To be reviewed
+Absences,int64,0,30,"[7, 0, 26, 14, 17]",To be reviewed
+Tutoring,int64,0,2,"[1, 0]",To be reviewed
+ParentalSupport,int64,0,5,"[2, 1, 3, 4, 0]",To be reviewed
+Extracurricular,int64,0,2,"[0, 1]",To be reviewed
+Sports,int64,0,2,"[0, 1]",To be reviewed
+Music,int64,0,2,"[1, 0]",To be reviewed
+Volunteering,int64,0,2,"[0, 1]",To be reviewed
+GPA,float64,0,2371,"[2.929195591667681, 3.042914833436377, 0.1126022544661815, 2.0542181397029484, 1.2880611817953875]",To be reviewed
+GradeClass,float64,0,5,"[2.0, 1.0, 4.0, 3.0, 0.0]",To be reviewed

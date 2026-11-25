@@ -1,0 +1,2 @@
+Project,DatasetSource,DatasetURL,InspirationURL,LocalFile,Rows,Columns,AssignedReviewer,ReviewDate,ReviewStatus
+Student Performance Prediction,Kaggle,https://www.kaggle.com/datasets/rabieelkharoua/students-performance-dataset,https://www.kaggle.com/code/annastasy/predicting-students-grades,Student_performance_data _.csv,2392,15,Rojina Zalzar,2026-11-25,Pending manual review

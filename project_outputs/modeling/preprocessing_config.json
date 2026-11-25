@@ -1,0 +1,83 @@
+{
+  "project_name": "Student Performance Prediction",
+  "step": "Step 4 – Prepare data for modeling",
+  "owner": "Eric Castellon",
+  "status": "Prepared — scope pending group approval",
+  "source_file": "Student_performance_data _.csv",
+  "target": "GPA",
+  "features": [
+    "Age",
+    "ParentalEducation",
+    "StudyTimeWeekly",
+    "Absences",
+    "Tutoring",
+    "ParentalSupport",
+    "Extracurricular",
+    "Sports",
+    "Music",
+    "Volunteering"
+  ],
+  "features_without_absences": [
+    "Age",
+    "ParentalEducation",
+    "StudyTimeWeekly",
+    "Tutoring",
+    "ParentalSupport",
+    "Extracurricular",
+    "Sports",
+    "Music",
+    "Volunteering"
+  ],
+  "id_column": "StudentID",
+  "subgroup_columns": [
+    "Gender",
+    "Ethnicity"
+  ],
+  "excluded_columns": {
+    "StudentID": "Identifier; not used as a predictor.",
+    "GradeClass": "Another grade-outcome field; excluded from inputs.",
+    "Gender": "Reserved for a possible exploratory subgroup review.",
+    "Ethnicity": "Reserved for a possible exploratory subgroup review."
+  },
+  "split": {
+    "test_size": 0.2,
+    "random_state": 42,
+    "stratified_on": "GPA quantile bins (q=5)",
+    "train_rows": 1913,
+    "test_rows": 479
+  },
+  "feature_groups": {
+    "numerical_standardized": [
+      "Age",
+      "StudyTimeWeekly",
+      "Absences"
+    ],
+    "ordinal_codes_standardized": [
+      "ParentalEducation",
+      "ParentalSupport"
+    ],
+    "binary_passthrough": [
+      "Tutoring",
+      "Extracurricular",
+      "Sports",
+      "Music",
+      "Volunteering"
+    ]
+  },
+  "preprocessing": {
+    "missing_value_handling": "None needed (no missing values found)",
+    "encoding": "None needed (ordered codes kept; binaries already 0/1)",
+    "scaling": "StandardScaler on numerical and ordinal inputs, fitted on training data only",
+    "rows_removed": 0,
+    "shared_code": "src/preprocessing.py -> build_preprocessor()"
+  },
+  "rules_for_modeling": [
+    "Use train.csv for fitting and tuning; use test.csv only for the final comparison.",
+    "Combine build_preprocessor() with each model in a Pipeline.",
+    "Do not use GPA, GradeClass, Gender or Ethnicity as inputs.",
+    "Also report results using features_without_absences."
+  ],
+  "pandas_version": "2.2.3",
+  "sklearn_version": "1.6.1",
+  "prepared_date": "2026-11-25"
+}

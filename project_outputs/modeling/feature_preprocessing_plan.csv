@@ -1,0 +1,11 @@
+Variable,Type,Preprocessing
+Age,Numerical,Standardize
+StudyTimeWeekly,Numerical,Standardize
+Absences,Numerical,Standardize
+ParentalEducation,Ordered category (0–4),"Keep codes, standardize"
+ParentalSupport,Ordered category (0–4),"Keep codes, standardize"
+Tutoring,Yes/No (0/1),Keep as is
+Extracurricular,Yes/No (0/1),Keep as is
+Sports,Yes/No (0/1),Keep as is
+Music,Yes/No (0/1),Keep as is
+Volunteering,Yes/No (0/1),Keep as is
